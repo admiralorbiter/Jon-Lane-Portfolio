@@ -1,0 +1,64 @@
+html {
+  height: 100%;
+  width: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #0038A8;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  font-size: 1em;
+}
+
+header {
+  background-color: #D60270;
+  padding: 20px;
+}
+
+img {
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  float: left;
+}
+
+.left {
+  width: 25%;
+}
+
+.right {
+  width: 75%;
+  padding: 25px; 
+ /* 25px because img has a 20px margin */
+}
+
+.topnav {
+  background-color: #9B4F96;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
