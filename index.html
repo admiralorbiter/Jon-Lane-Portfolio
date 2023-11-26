@@ -5,12 +5,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Jon Lane</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" id="theme-style"/>
 </head>
 
 <body>
   <header>
     <h1>Jon Lane</h1>
+    <!-- Theme Selection -->
+    <label>
+      <input type="radio" name="theme" value="default" checked> Default Theme
+    </label>
+    <label>
+      <input type="radio" name="theme" value="darkmode"> Dark Mode
+    </label>
+    <label>
+      <input type="radio" name="theme" value="lightmode"> Light Mode
+    </label>
   </header>
   <nav class="topnav">
     <a href="#home">Home</a>
