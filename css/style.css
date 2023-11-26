@@ -8,11 +8,8 @@ html {
 a{
   color:#0038A8;
 }
-h1 {
-  text-align: center;
-}
 
-h2 {
+.pride {
   color: #9B4F96;
   text-decoration: underline;
   text-decoration-color: #D60270;
@@ -26,6 +23,7 @@ header {
 main {
   padding: 20px;
   background-color: white;
+  color: black;
 }
 
 img {
