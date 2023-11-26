@@ -5,18 +5,27 @@ html {
   background-color: #0038A8;
   color: white;
 }
-
+a{
+  color:#0038A8;
+}
 h1 {
   text-align: center;
 }
 
 h2 {
-  font-size: 1em;
+  color: #9B4F96;
+  text-decoration: underline;
+  text-decoration-color: #D60270;
 }
 
 header {
   background-color: #D60270;
   padding: 20px;
+}
+
+main {
+  padding: 20px;
+  background-color: white;
 }
 
 img {
@@ -40,6 +49,14 @@ img {
   width: 75%;
   padding: 25px; 
  /* 25px because img has a 20px margin */
+}
+
+.third {
+  width: 33.33%;
+}
+
+.fourth {
+  width: 25%;
 }
 
 .topnav {
