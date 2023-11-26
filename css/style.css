@@ -21,7 +21,7 @@ header {
 }
 
 main {
-  padding: 20px;
+  padding: 20px 200px 75px;
   background-color: white;
   color: black;
 }
@@ -55,6 +55,14 @@ img {
 
 .fourth {
   width: 25%;
+}
+
+.half {
+  width: 50%;
+}
+
+.quarter {
+  width: 75%;
 }
 
 .topnav {
