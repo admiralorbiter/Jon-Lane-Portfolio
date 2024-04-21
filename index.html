@@ -4,97 +4,61 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Jon Lane's Portfolio</title>
-    <link
-      href="css/style.css"
-      rel="stylesheet"
-      type="text/css"
-      id="theme-style"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet" type="text/css" id="theme-style"/>
+    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
   </head>
-
   <body>
-    <!-- Header -->
-    <header>
-      <h1>Jon Lane</h1>
-      <!-- Theme Selection -->
-      <label> Pick Your Theme: </label>
-      <label>
-        <input type="radio" name="theme" value="default" checked /> Default
-      </label>
-      <label> <input type="radio" name="theme" value="modern" /> Modern </label>
-      <label>
-        <input type="radio" name="theme" value="oldschool" /> Old School
-      </label>
-    </header>
-    <!-- Navigation -->
-    <nav class="topnav">
-      <a href="../index.html">Home</a>
-      <a href="#news">Work</a>
-      <a href="#contact">Projects</a>
-      <a href="#about">About</a>
-    </nav>
-    <summary class="row">
-      <div class="col left">
-        <img src="pics/profilepicture.jpg" alt="Profile Picture" width="100%" height="75%" />
-      </div>
-      <div class="col right">
-        <h2>About Me</h2>
-        <h3>PREP-KC - Innovation Technology Manager</h3>
-        <h3>Masters of CS, ASU, 2023</h3>
-        <p>I consider myself an educator, programmer and competitor, at times in that order. I currently work at a non-profit where I help run a computer science pathway for several districts in the bistate area.
-          My passion is for programming and technology. I love to learn new things and teach others. I spend quite a bit of free time contributing to open source and other interesting tech projects. 
-          Outside of tech, I enjoy competing in a high level in competitive gaming ranging the spectrum from card games like poker to video games like StarCraft 2.
-        </p>
-        <div class="container">
-          <div class="sliding-block"></div>
-          <div class="secret-panel">
-              <label class="toggle" title="By clicking this checkbox you agree not to hold anything you see against me.">
-                  <input type="checkbox" id="colorToggle" title="There is no going back"> Unlock Unprofessionalism&nbsp;&nbsp;&nbsp;
-                  <details>
-                    <summary>Details</summary>
-                    Clicking this box will unlock the more personal side of my website.
-                  </details>
-              </label>
-          </div>
-      </div>
-      </div>
-    </summary>
-    <main class="row">
-      <div class="col fourth">
-        <h2 class="pride">Educator</h2>
-        <p><a href="educator/education.html">Getting Into Education from Tech</a></p>
-        <p><a href="educator/lhs.html">Lawrence High School</a></p>
-        <p><a href="https://jlane.dev">Pathways to Technology</a></p>
-        <p><a href="https://prepkcdia.com">NC3 Data Analytics Cert Additional Support</a></p>
-        <p><a href="https://public.tableau.com/app/profile/jonathan.lane5972/viz/EducationADyingProfession/Story1">Education: The Dying Profession</a></p>
-      </div>
-      <div class="col fourth">
-        <h2 class="pride">Programmer</h2>
-        <p><a href="programmer/gamedev.html">Game Dev</a></p>
-        <p><a href="programmer/webdev.html">Web Dev</a></p>
-        <p><a href="programmer/datavisualization.html">Data Visualization</a></p>
-        <p><a href="programmer/java.html">Java</a></p>
-        <p><a href="programmer/python.html">Python</a></p>
-      </div>
-      <div class="col fourth">
-        <h2 class="pride">Competitor</h2>
-        <p><a href="">Poker</a></p>
-        <p><a href="">StarCraft 2</a></p>
-        <p><a href="">Board Games</a></p>
-        <p><a href="">Apex Legends</a></p>
-        <p><a href="">Call of Duty</a></p>
-      </div>
-      <div class="col fourth">
-        <h2 class="pride">Projects</h2>
-        <p><a href="">Video Editing Projects</a></p>
-        <p><a href="">Project 2</a></p>
-        <p><a href="">Project 3</a></p>
-        <p><a href="">Project 4</a></p>
-        <p><a href="">Project 5</a></p>
-      </div>
-    </main>
-    <hr />
-    <script src="js/script.js"></script>
-    <script src="js/secret_door.js"></script>
+    <div id="navbar" hx-get="nav.html" hx-trigger="load"></div>
+    <div class="container">
+      <summary class="row">
+        <div class="col-5">
+          <img src="pics/profilepicture.jpg" alt="Profile Picture" width="100%" height="100%" />
+        </div>
+        <div class="col">
+          <h2>About Me</h2>
+          <h3>PREP-KC - Innovation Technology Manager</h3>
+          <h3>Masters of CS, ASU, 2023</h3>
+          <p>As an enthusiastic educator, adept programmer, and fierce competitor, I embrace these roles with a dynamic spirit—often finding them intertwined in my daily life. At present, I work with a nonprofit, where I help orchestrate a computer science pathway for several school districts across the bistate area. It's truly inspiring to guide students as they discover the power and potential of coding.</p>
+          <p>Programming is more than a career to me—it's a calling. I'm always on the lookout to learn and apply the latest technologies, contributing to open source projects and finding innovative ways to solve problems. This ongoing journey of learning and sharing knowledge is what drives me every day.</p>
+          <p>Outside of my professional endeavors, I immerse myself in the world of competitive gaming, from strategic card games like poker to esports like StarCraft 2. This not only satisfies my competitive spirit but also hones skills that are vital in both personal and professional contexts—like strategic planning and quick decision-making.</p>
+          <p>In everything I do, I aim to inspire, innovate, and push boundaries, while keeping the fun and passion alive in all my pursuits.</p>
+        </div>
+      </summary>
+      <main class="row">
+        <div class="col">
+          <h2 class="pride">Educator</h2>
+          <p><a href="educator/education.html">Getting Into Education from Tech</a></p>
+          <p><a href="educator/lhs.html">Lawrence High School</a></p>
+          <p><a href="https://jlane.dev">Pathways to Technology</a></p>
+          <p><a href="https://prepkcdia.com">NC3 Data Analytics Cert Additional Support</a></p>
+          <p><a href="https://public.tableau.com/app/profile/jonathan.lane5972/viz/EducationADyingProfession/Story1">Education: The Dying Profession</a></p>
+        </div>
+        <div class="col">
+          <h2 class="pride">Programmer</h2>
+          <p><a href="programmer/gamedev.html">Game Dev</a></p>
+          <p><a href="programmer/webdev.html">Web Dev</a></p>
+          <p><a href="programmer/datavisualization.html">Data Visualization</a></p>
+          <p><a href="programmer/java.html">Java</a></p>
+          <p><a href="programmer/python.html">Python</a></p>
+        </div>
+        <div class="col">
+          <h2 class="pride">Competitor</h2>
+          <p><a href="">Poker</a></p>
+          <p><a href="">StarCraft 2</a></p>
+          <p><a href="">Board Games</a></p>
+          <p><a href="">Apex Legends</a></p>
+          <p><a href="">Call of Duty</a></p>
+        </div>
+        <div class="col">
+          <h2 class="pride">Projects</h2>
+          <p><a href="">Video Editing Projects</a></p>
+          <p><a href="">Project 2</a></p>
+          <p><a href="">Project 3</a></p>
+          <p><a href="">Project 4</a></p>
+          <p><a href="">Project 5</a></p>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
