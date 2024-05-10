@@ -14,6 +14,22 @@ header>h1{
   margin:.5em;
 }
 
+.text{
+  padding-inline:18em;
+  font-family: 'Montserrat';
+  font-size: 1.25em;
+}
+
+.box{
+  outline: .35em ridge rgba(61, 31, 59, .6);
+  border-radius: 2rem;
+  padding: 1em;
+}
+
+.card-text{
+  font-size: .75em;
+}
+
 main{
   background-color:white;
   color: black;
