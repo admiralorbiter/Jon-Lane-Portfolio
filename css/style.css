@@ -51,6 +51,13 @@ main>h2 {
   font-style: italic; /* Makes the subtitle italicized */
 }
 
+.h2-color {
+  color: #9B4F96; /* Echoing the main title's color for consistency */
+  font-weight: normal; /* Less weight since it's a subtitle */
+  opacity: 0.8; /* Slightly transparent to differentiate from the title */
+  font-style: italic; /* Makes the subtitle italicized */
+}
+
 img {
   border-radius: 5%;
   padding: .5em;
