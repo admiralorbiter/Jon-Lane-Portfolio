@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Jon Lane's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css" id="theme-style"/>
+     
+  </head>
+  <body>
+    {% include 'nav.html' %}
+    <main class="text">
+        <h1>Data Visualizations</h1>
+        <div class="row">
+          <div class="col">
+            <h2 class="h2-color">Credentials:</h2>
+            <div class="text-center">
+              <p>Tableau Desktop Specialist - Issue by Tableau in 2022</p>
+              <p>Visual Analytics Apprentice 1 - Issued by Playfair Data in 2022</p>
+              <p>Intro to Data Analytics - Issued by NC3 in 2023</p>
+            </div>
+          </div>
+          <div class="col">
+            <h2 class="h2-color">Projects:</h2>
+            <ul class="mx-5">
+              <li><a href="https://public.tableau.com/app/profile/jonathan.lane5972/viz/EducationADyingProfession/Story1">Education: A Dying Profession</a></li>
+              <li><a href="https://public.tableau.com/app/profile/jonathan.lane5972/viz/KansasCityCollegeGraduationRates/Story1">Kansas City: College Graduation Rates</a></li>
+              <li><a href="https://public.tableau.com/app/profile/jonathan.lane5972/viz/MiseryADeepDiveIntoMissouriData/Story1">Misery: A Deep Dive into MO State Data</a></li>
+              <li><a href="https://public.tableau.com/app/profile/jonathan.lane5972/viz/KCMOLeadPoisoningCount2018/Dashboard1">KCMO Lead Poisoning Count</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="box mb-1">
+          <p>Over the past few years, I have earned several credentials in data analytics, a field I am deeply passionate about. In my spare time, I engage in data science and citizen science research, which includes the projects highlighted below. My primary tool is Tableau, though I have experience using a variety of other tools over the past year. A significant part of my current role involves sourcing open data and refining it for use in visualizations.</p>
+          <p>My strengths lie in the less visible, yet crucial aspects of full data science and data pipeline management. I have extensive experience in data cleaning and transferring data between different systems like Salesforce, FormAssembly, and WordPress. With a solid background in Python, I frequently utilize powerful data science libraries such as pandas to enhance my work.</p>
+        </div>
+    </main>
+  </body>
+</html>

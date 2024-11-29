@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Jon Lane's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css" id="theme-style"/>
+  </head>
+  <body>
+    {% include 'nav.html' %}
+    <main>
+        <h1>Lawrence High School</h1>
+        <p>I taught math and computer science which broke down into 4 different preps: Advance Algebra 2, Algebra 2, Intro to CS, Advance CS. This was my first year teaching, so I had a tenuous grasp on the students at the best of times.</p>
+        <img alt="white board that has pictures and says 'get tow work'" src="{{ url_for('static', filename='images/lhs-pics/whiteboard-gettowork.jpg') }}" width="100%" height="100%" />
+        <p>My white board became a place for student creativity. All it took the spark of one student to start drawing on the board and others took off. Throughout the year I would have to clear them, but that didn't stop the artists from continuing their work.
+            I love the idea of impermanence and white board was a great reminder.
+            </p>
+        <div class="row">
+            <div class="col">
+                <img alt="picture of chesty" src="{{ url_for('static', filename='images/lhs-pics/chesty.jpg') }}" width="90%" height="90%" />
+            </div>
+            <div class="col">
+                <img alt="picture of my classroom" src="{{ url_for('static', filename='images/lhs-pics/classroom1.jpg') }}" width="90%" height="90%" />
+            </div>
+            <div class="col">
+                <img alt="picture of my classroom" src="{{ url_for('static', filename='images/lhs-pics/classroom2.jpg') }}" width="90%" height="90%" />
+            </div>
+        </div>
+        <p>I had a great batch of students, especially for year 1, even though they did toe the line. I even had a group dress as me for Halloween! At the end of the year my 5th hour even got me a cake with my 'catch phrase' they had been hearing all semester.
+        </p>
+        <div class="row">
+            <div class="col">
+                <img alt="picture of my fifth hour" src="{{ url_for('static', filename='images/lhs-pics/fifthhour.jpg') }}" width="90%" height="90%" />
+            </div>
+            <div class="col">
+                <img alt="picture of my students on halloween" src="{{ url_for('static', filename='images/lhs-pics/halloween.jpg') }}" width="90%" height="90%" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img alt="me unboxing a cake" src="{{ url_for('static', filename='images/lhs-pics/cake.jpg') }}" width="90%" height="90%" />
+            </div>
+            <div class="col">
+                <img alt="a cake that says 'why are you like this'" src="{{ url_for('static', filename='images/lhs-pics/cake2.jpg') }}" width="90%" height="50%" />
+                <img alt="student feedback" src="{{ url_for('static', filename='images/lhs-pics/feedback1.jpg') }}" width="90%" height="50%" />
+            </div>
+            <div class="col">
+                <img alt="student contract" src="{{ url_for('static', filename='images/lhs-pics/contract.jpg') }}" width="90%" height="90%" />
+                <p>I did not have to answer any question.</p>
+            </div>
+        </div>
+    </main>
+  </body>
+</html>
