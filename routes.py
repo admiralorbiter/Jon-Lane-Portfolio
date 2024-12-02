@@ -36,3 +36,19 @@ def videoediting():
 @app.route("/educator/lhs")
 def lhs():
     return render_template("educator/lhs.html")
+
+@app.route("/programmer")
+def programmer():
+    return render_template("programmer/programmer.html")
+
+@app.route("/educator")
+def educator():
+    return render_template("educator.html")
+
+@app.route("/competitor")
+def competitor():
+    return render_template("competitor.html")
+
+@app.route("/personal")
+def personal():
+    return render_template("personal.html")

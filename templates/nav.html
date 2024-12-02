@@ -3,9 +3,17 @@
   <!-- Navigation -->
   <nav class="topnav">
     <a href="{{ url_for('index') }}">Home</a>
-    <a href="{{ url_for('webdev') }}">Web Development</a>
-    <a href="{{ url_for('software') }}">Software Development</a>
-    <a href="{{ url_for('gamedev') }}">Game Development</a>
-    <a href="{{ url_for('datavisualization') }}">Data Visualization / Analysis</a>
+    <div class="dropdown">
+      <a href="{{ url_for('programmer') }}" class="dropbtn">Programmer</a>
+      <div class="dropdown-content">
+        <a href="{{ url_for('webdev') }}">Web</a>
+        <a href="{{ url_for('software') }}">Software</a>
+        <a href="{{ url_for('gamedev') }}">Game</a>
+        <a href="{{ url_for('datavisualization') }}">Data</a>
+      </div>
+    </div>
+    <a href="{{ url_for('educator') }}">Educator</a>
+    <a href="{{ url_for('competitor') }}">Competitor</a>
+    <a href="{{ url_for('personal') }}">Personal</a>
   </nav>
 </header>
