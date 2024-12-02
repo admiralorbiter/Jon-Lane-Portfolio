@@ -212,7 +212,7 @@
 }
 
 .project-card {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(155, 79, 150, 0.95);  /* Purple background */
     border-radius: 1rem;
     padding: 1.5rem;
     transition: transform 0.3s ease;
@@ -223,7 +223,7 @@
 }
 
 .project-card h3 {
-    color: #D60270;
+    color: #0038A8;  /* Blue for better contrast */
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
@@ -231,10 +231,11 @@
 }
 
 .project-card h3 i {
-    color: #9B4F96;
+    color: #D60270;  /* Pink for icons */
 }
 
 .project-card p {
+    color: white;  /* White text for readability */
     margin-bottom: 1.5rem;
     line-height: 1.6;
 }
@@ -245,19 +246,19 @@
 }
 
 .project-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    background-color: #9B4F96;
+    background-color: #0038A8;  /* Blue background for links */
     color: white;
     text-decoration: none;
     border-radius: 0.5rem;
+    padding: 0.5rem 1rem;  /* Add padding for better button appearance */
+    display: inline-flex;  /* Align icon and text */
+    align-items: center;
+    gap: 0.5rem;  /* Space between icon and text */
     transition: background-color 0.3s ease;
 }
 
 .project-link:hover {
-    background-color: #D60270;
+    background-color: #D60270;  /* Pink on hover */
 }
 
 /* Responsive Design */

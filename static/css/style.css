@@ -154,6 +154,7 @@ img {
 }
 
 .project-card h3 {
+  font-family: 'Roboto', sans-serif;
   color: #D60270;
 }
 
@@ -174,4 +175,16 @@ img {
     color: #b0b0b0; /* Light gray for better contrast */
     font-size: 0.9em; /* Slightly smaller font size */
     margin-bottom: 0.5em; /* Space below the institution name */
+}
+
+/* Add a more readable font for titles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+main > h1, main > h2, .h2-color {
+  font-family: 'Roboto', sans-serif; /* Use Roboto for better readability */
+  color: #9B4F96;
+  text-decoration: underline;
+  text-decoration-color: #D60270;
+  margin-left: 1em;
+  font-weight: bold; /* Ensure the font weight is bold for emphasis */
 }
