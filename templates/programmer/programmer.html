@@ -4,34 +4,91 @@
 
 {% block extra_head %}
 <link href="{{ url_for('static', filename='css/programmer.css') }}" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 {% endblock %}
 
 {% block content %}
 <div class="programmer-container">
     <h1 class="section-title">The Programmer</h1>
     
+    <div class="projects-section">
+        <h2>Featured Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>
+                    <i class="fas fa-chart-line"></i>
+                    DataDeck
+                </h3>
+                <p>An innovative educational platform designed to enhance classroom collaboration and data visualization. Students can easily share and discuss their data science projects, making learning more interactive and engaging.</p>
+                <div class="project-links">
+                    <a href="https://datadeck.dev" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> Live Site
+                    </a>
+                    <a href="https://github.com/admiralorbiter/DataDeck" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>
+                    <i class="fas fa-users-gear"></i>
+                    Virtual Management System
+                </h3>
+                <p>A comprehensive volunteer management solution that replaces Salesforce. Features include event management, volunteer tracking, organization management, and advanced search capabilities.</p>
+                <div class="project-links">
+                    <a href="https://polaris-jlane.pythonanywhere.com/" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> Live Site
+                    </a>
+                    <a href="https://github.com/admiralorbiter/VMS" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>
+                    <i class="fas fa-graduation-cap"></i>
+                    KC College Navigator
+                </h3>
+                <p>A user-friendly platform helping students explore and compare colleges in Kansas City. Features include program search, institution comparison, and detailed insights into graduation outcomes.</p>
+                <div class="project-links">
+                    <a href="https://kccollegenavigator.com/" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> Live Site
+                    </a>
+                    <a href="https://github.com/admiralorbiter/kc_college_advisor" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="skills-section">
         <div class="skill-category">
             <h2>Preferred Languages</h2>
             <ul class="skill-list">
                 <li>
                     HTML + CSS + Bootstrap
+                    <span class="language-tag frontend-tag">Frontend</span>
                     <span class="skill-description">Check out datadeck.dev to see how we can use basics for complex web applications.</span>
                 </li>
                 <li>
                     Python + Flask
+                    <span class="language-tag backend-tag">Backend</span>
                     <span class="skill-description">kccollegeexplorer.com shows you how we can use Flask/Python on backend without performance hit.</span>
                 </li>
                 <li>
                     SQLite
+                    <span class="language-tag database-tag">Database</span>
                     <span class="skill-description">I love using SQLite databases especially for applications like kccollegeexplorer.com</span>
                 </li>
                 <li>
                     PostgreSQL
+                    <span class="language-tag database-tag">Database</span>
                     <span class="skill-description">SQLite isn't always the best solution. In those cases, I prefer Postgres compared to other SQL databases.</span>
                 </li>
                 <li>
                     C++ / C
+                    <span class="language-tag embedded-tag">Embedded</span>
                     <span class="skill-description">This was the first language I learned. I love working on smaller hobby projects using it.</span>
                 </li>
             </ul>
@@ -42,22 +99,27 @@
             <ul class="skill-list">
                 <li>
                     Java
+                    <span class="language-tag backend-tag">Backend</span>
                     <span class="skill-description">I have taught, worked on and created Java projects. I don't mind the language, but don't see a use for spinning up new Java projects.</span>
                 </li>
                 <li>
                     JavaScript
+                    <span class="language-tag frontend-tag">Frontend</span>
                     <span class="skill-description">I hate JavaScript, I try to stay away from it even in my web applications. If you want me to code in JS, you need to pay me.</span>
                 </li>
                 <li>
                     ReactJS
+                    <span class="language-tag frontend-tag">Frontend</span>
                     <span class="skill-description">I hate JavaScript and I hate ReactJS even more. State an issue? Well now you have 2 states... Either way, happy to do it for tons of money.</span>
                 </li>
                 <li>
                     NodeJS
+                    <span class="language-tag backend-tag">Backend</span>
                     <span class="skill-description">Same feelings as ReactJS. Will do it for the right price.</span>
                 </li>
                 <li>
                     Salesforce
+                    <span class="language-tag database-tag">Database</span>
                     <span class="skill-description">There actually isn't money you could pay me to do this again.</span>
                 </li>
             </ul>
@@ -69,13 +131,18 @@
             <h2>Courses Taught</h2>
             <div class="course-card">
                 <h3>Web Development Fundamentals</h3>
-                <p>through NuCamp Bootcamp</p>
+                <p class="course-institution">NuCamp Bootcamp 2019-2021</p>
                 <div class="tech-stack">HTML, CSS, and Bootstrap</div>
             </div>
             <div class="course-card">
                 <h3>Front End Web Development</h3>
-                <p>through NuCamp Bootcamp</p>
+                <p class="course-institution">NuCamp Bootcamp 2019-2021</p>
                 <div class="tech-stack">HTML, CSS, Bootstrap + ReactJS</div>
+            </div>
+            <div class="course-card">
+                <h3>Programming I</h3>
+                <p class="course-institution">UMKC 2018-2020</p>
+                <div class="tech-stack">Python</div>
             </div>
         </div>
 
@@ -90,24 +157,6 @@
             <div class="course-card">
                 <h3>CRUD Application</h3>
                 <div class="tech-stack">HTML/Bootstrap/HTMX+SQLite+Flask</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="projects-section">
-        <h2>Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>My Portfolio Website</h3>
-                <p>This website was created using HTML + CSS + Bootstrap + HTMX. Meant to showcase my portfolio, my strength isn't in design. Instead, you will find that this website meets all the accessibility standards and has a great Lighthouse score.</p>
-            </div>
-            <div class="project-card">
-                <h3>Example CRUD Application</h3>
-                <p>This is a sample CRUD application showcasing a movie management app using my preferred simple stack. It contains all the operations needed for a simple application and showcases how simple the stack is to use and implement while looking great.</p>
-            </div>
-            <div class="project-card">
-                <h3>PREP-KC Websites</h3>
-                <p>Over the last few years in my position at PREP-KC, I have developed several websites including prepkc.org, Math Relays Website, Data Science Website, and Pathways to Tech Website.</p>
             </div>
         </div>
     </div>
