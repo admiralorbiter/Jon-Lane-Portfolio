@@ -1,110 +1,114 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Jon Lane's Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css" id="theme-style"/>
-     
-  </head>
-  <body>
-    {% include 'nav.html' %}
-    <main class="text">
-        <h1>Web Development</h1>
-        <p>Languages Preferred: </p>
-        <div class="row">
-          <div class="col">
-            <p>Frontend:</p>
-            <ul>
-                <li>HTML+HTMX/Bootstrap or Tailwind</li>
-                <li>JavaScript/Typescript</li>
-                <li>ReactJS</li>
-            </ul>
-          </div>
-          <div class="col">
-          <p>Backend:</p>
-          <ul>
-              <li>Flask/Django</li>
-              <li>ExpressJS/NodeJS</li>
-          </ul>
-          </div>
-          <div class="col">
-            <p>Database:</p>
-            <ul>
-                <li>SQLite</li>
-                <li>PostgreSQL</li>
-                <li>MongoDB</li>
-            </ul>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <p><u>Courses Taught</u></p>
-            <ul>
-                <li>
-                    <strong>Web Development Fundamentals</strong> through NuCamp Bootcamp
-                    <ul>
-                        <li>HTML, CSS, and Bootstrap</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Front End Web Development</strong> through NuCamp Bootcamp
-                    <ul>
-                        <li>HTML, CSS, and Bootstrap + ReactJS</li>
-                    </ul>
-                </li>
-            </ul>
-          </div>
-          <div class="col">
-            <p><u>Courses Developed</u></p>
-            <ul>
-                <li>HTML/CSS+Bootstrap</li>
-                <li>WordPress</li>
-                <li>CRUD Application - The Simple Stack: HTML/Bootstrap/HTMX+SQLite+Flask</li>
-            </ul>
-          </div>
-        </div>
-        <div class="container m-5 row">
-          <h2 class="text-center">Projects</h2>
-          <div class="card col m-1">
-              <div class="card-body">
-                  <h5 class="card-title">My Portfolio Website</h5>
-                  <p class="card-text">This website was created using HTML + CSS + Bootstrap + HTMX. Meant to showcase my portfolio, my strength isn’t in design. Instead, you will find that this website meets all the accessibility standards and has a great Lighthouse score. Also, you will get a good idea of what my code looks like, including comments meant for other programmers.</p>
-              </div>
-          </div>
-  
-          <div class="card col m-1">
-              <div class="card-body">
-                  <h5 class="card-title">Example CRUD Application</h5>
-                  <p class="card-text">This is a sample CRUD application showcasing a movie management app using my preferred simple stack. It contains all the operations needed for a simple application and showcases how simple the stack is to use and implement while looking great.</p>
-              </div>
-          </div>
-  
-          <div class="card col m-1">
-              <div class="card-body">
-                  <h5 class="card-title">PREP-KC Websites</h5>
-                  <p class="card-text">Over the last few years in my position at PREP-KC, I have developed several websites:</p>
-                  <ul class="list-unstyled">
-                      <li><a href="http://prepkc.org" class="card-link">prepkc.org</a></li>
-                      <li>Math Relays Website</li>
-                      <li>Data Science Website</li>
-                      <li>Pathways to Tech Website</li>
-                  </ul>
-              </div>
-          </div>
-        </div>
-        </div>
-        <div class="box">
-          <p>I began my journey in web development in 2001, when I was in 6th grade, thanks to a family computer purchased by my uncle. From 2001 to 2008, I devoted my free time to mastering HTML 4.0 and CSS3, creating websites on a Gateway computer using dial-up internet. My initial web projects were guild websites for World of Warcraft, which sparked my interest in more complex features, eventually leading to learning PHP, MySQL, and JavaScript to develop full-stack applications.</p>
+{% extends "base.html" %}
 
-          <p>These skills were honed through countless interactions on message boards and chat rooms, where I sought and shared advice. By my senior year of high school, I had started to earn money through contract work, developing simple applications for volunteer management among other tasks. Although I later shifted towards software development with Java and C++, I continued freelance WordPress projects until 2016 and still maintain several sites voluntarily, keeping connected with the WordPress community.</p>
+{% block extra_head %}
+<link href="{{ url_for('static', filename='css/programmer.css') }}" rel="stylesheet" type="text/css"/>
+<link href="{{ url_for('static', filename='css/webdev.css') }}" rel="stylesheet" type="text/css"/>
+{% endblock %}
 
-          <p>Since 2016, my professional role has heavily involved web development. I've taught multiple courses and led projects, deepening my expertise in HTML, CSS, and Bootstrap by developing from official documentation. My projects have included major event websites and significant redesigns of our main organizational site.</p>
-
-          <p>Recently, I've embraced a streamlined stack for frontend development using HTML/CSS, Bootstrap, and HTMX, with SQLite for databases (switching to PostgreSQL when necessary). For backend development, I prefer Flask or Django. This setup has enabled me to create sophisticated web applications, some of which have been collaborative projects with high school students.</p>
-
+{% block content %}
+<main class="programmer-container">
+    <h1 class="section-title">Web Development</h1>
+    
+    <!-- Languages Section -->
+    <div class="skills-section">
+        <div class="skill-category">
+            <h2>Frontend</h2>
+            <ul class="skill-list">
+                <li>HTML+HTMX/Bootstrap <span class="language-tag frontend-tag">Frontend</span></li>
+                <li>JavaScript/Typescript <span class="language-tag frontend-tag">Frontend</span></li>
+                <li>ReactJS <span class="language-tag frontend-tag">Frontend</span></li>
+            </ul>
         </div>
-    </main>
-  </body>
-</html>
+        
+        <div class="skill-category">
+            <h2>Backend</h2>
+            <ul class="skill-list">
+                <li>Flask/Django <span class="language-tag backend-tag">Backend</span></li>
+                <li>ExpressJS/NodeJS <span class="language-tag backend-tag">Backend</span></li>
+            </ul>
+        </div>
+        
+        <div class="skill-category">
+            <h2>Database</h2>
+            <ul class="skill-list">
+                <li>SQLite <span class="language-tag database-tag">Database</span></li>
+                <li>PostgreSQL <span class="language-tag database-tag">Database</span></li>
+                <li>MongoDB <span class="language-tag database-tag">Database</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Courses Section -->
+    <div class="courses-grid">
+        <div class="course-section">
+            <h2>Courses Taught</h2>
+            <div class="course-card">
+                <h3>Web Development Fundamentals</h3>
+                <div class="course-institution">NuCamp Bootcamp 2019-2021</div>
+                <div class="tech-stack">HTML, CSS, and Bootstrap</div>
+            </div>
+            <div class="course-card">
+                <h3>Front End Web Development</h3>
+                <div class="course-institution">NuCamp Bootcamp 2019-2021</div>
+                <div class="tech-stack">HTML, CSS, Bootstrap + ReactJS</div>
+            </div>
+            <div class="course-card">
+              <h3>Programming I</h3>
+              <p class="course-institution">UMKC 2018-2020</p>
+              <div class="tech-stack">Python</div>
+          </div>
+        </div>
+
+        <div class="course-section">
+            <h2>Courses Developed</h2>
+            <div class="course-card">
+                <h3>HTML/CSS+Bootstrap</h3>
+            </div>
+            <div class="course-card">
+                <h3>WordPress</h3>
+            </div>
+            <div class="course-card">
+                <h3>CRUD Application</h3>
+                <div class="tech-stack">HTML/Bootstrap/HTMX+SQLite+Flask</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="projects-section">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3><i class="fas fa-globe"></i>My Portfolio Website</h3>
+                <p>This website was created using HTML + CSS + Bootstrap + HTMX. Meant to showcase my portfolio, my strength isn't in design. Instead, you will find that this website meets all the accessibility standards and has a great Lighthouse score.</p>
+            </div>
+
+            <div class="project-card">
+                <h3><i class="fas fa-code"></i>Example CRUD Application</h3>
+                <p>This is a sample CRUD application showcasing a movie management app using my preferred simple stack. It contains all the operations needed for a simple application and showcases how simple the stack is to use and implement while looking great.</p>
+            </div>
+
+            <div class="project-card">
+                <h3><i class="fas fa-project-diagram"></i>PREP-KC Websites</h3>
+                <p>Over the last few years in my position at PREP-KC, I have developed several websites:</p>
+                <ul class="list-unstyled">
+                    <li><a href="http://prepkc.org" class="live-link">prepkc.org</a></li>
+                    <li>Math Relays Website</li>
+                    <li>Data Science Website</li>
+                    <li>Pathways to Tech Website</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Journey Section -->
+    <div class="intro-section">
+        <div class="intro-text">
+            <p>I began my journey in web development in 2001, when I was in 6th grade, thanks to a family computer purchased by my uncle. From 2001 to 2008, I devoted my free time to mastering HTML 4.0 and CSS3, creating websites on a Gateway computer using dial-up internet.</p>
+            <p>These skills were honed through countless interactions on message boards and chat rooms, where I sought and shared advice. By my senior year of high school, I had started to earn money through contract work, developing simple applications for volunteer management among other tasks.</p>
+            <p>Since 2016, my professional role has heavily involved web development. I've taught multiple courses and led projects, deepening my expertise in HTML, CSS, and Bootstrap by developing from official documentation.</p>
+            <p>Recently, I've embraced a streamlined stack for frontend development using HTML/CSS, Bootstrap, and HTMX, with SQLite for databases (switching to PostgreSQL when necessary). For backend development, I prefer Flask or Django.</p>
+        </div>
+    </div>
+</main>
+{% endblock %}

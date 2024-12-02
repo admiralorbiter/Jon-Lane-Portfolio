@@ -1,0 +1,44 @@
+/* Override styles for more compact layout */
+.skills-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.skill-category {
+    flex: 1;
+    padding: 1.5rem;
+    background: rgba(0, 56, 168, 0.95);
+    border-radius: 15px;
+}
+
+.skill-category h2 {
+    color: #D60270;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.skill-list {
+    margin: 0;
+    padding: 0;
+}
+
+.skill-list li {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.language-tag {
+    padding: 0.2em 0.4em;
+    font-size: 0.7em;
+}
+
+@media (max-width: 768px) {
+    .skills-section {
+        flex-direction: column;
+    }
+}
