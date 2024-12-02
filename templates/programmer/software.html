@@ -1,64 +1,72 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Jon Lane's Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css" id="theme-style"/>
-     
-  </head>
-  <body>
-    {% include 'nav.html' %}
-    <main class="text">
+{% extends "base.html" %}
+{% block extra_head %}
+<link href="{{ url_for('static', filename='css/software.css') }}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+
+{% block content %}
+<main class="software-page">
+    <div class="hero-section">
         <h1>Software Development</h1>
-        <div class="row">
-          <div class="col">
-            <p>Languages Preferred:</p>
+        <p class="intro-text">
+            I'm a full-stack developer with a passion for building educational technology and 
+            data-driven applications. With experience in both teaching and development, I 
+            create solutions that are not just functional, but also intuitive and user-friendly.
+        </p>
+    </div>
+
+    <div class="skills-section">
+        <div class="skill-card">
+            <h3>Languages Preferred</h3>
             <ul>
-              <li>Python</li>
-              <li>Java</li>
-              <li>C++ / C</li>
+                <li><span class="tag">Python</span></li>
+                <li><span class="tag">Java</span></li>
+                <li><span class="tag">C++ / C</span></li>
             </ul>
-          </div>
-          <div class="col">
-            <p>Frameworks:</p>
-            <ul>
-              <li>Flask</li>
-              <li>Spring Boot</li>
-              <li>Qt</li>
-            </ul>
-          </div>
-          <div class="col">
-            <p>Low Code / No Code:</p>
-            <ul>
-              <li>WordPress</li>
-              <li>SalesForce</li>
-          </div>
         </div>
-        <div class="row">
-          <div class="col">
-            <p><u>Courses Taught</u></p>
+
+        <div class="skill-card">
+            <h3>Frameworks</h3>
+            <ul>
+                <li><span class="tag">Flask</span></li>
+                <li><span class="tag">Spring Boot</span></li>
+                <li><span class="tag">Qt</span></li>
+            </ul>
+        </div>
+
+        <div class="skill-card">
+            <h3>Low Code / No Code</h3>
+            <ul>
+                <li><span class="tag">WordPress</span></li>
+                <li><span class="tag">SalesForce</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="courses-section">
+        <div class="course-card">
+            <h3>Courses Taught</h3>
             <ul>
                 <li>Intro to Programming through UMKC School of Computer Science</li>
                 <li>Computer Science A AP</li>
             </ul>
-          </div>
-          <div class="col">
-            <p><u>Courses Developed</u></p>
+        </div>
+
+        <div class="course-card">
+            <h3>Courses Developed</h3>
             <ul>
                 <li>Intro to Python</li>
                 <li>Intro to Java</li>
                 <li>CRUD Application</li>
             </ul>
-          </div>
-          <div class="box">
-            <p>From the moment we got a family computer, a generous gift from my uncle when I was in 6th grade, my fascination with programming took root. I devoted three years to mastering Visual Basic 6, crafting innovative applications for Yahoo and AOL chat services. By the time I entered 9th grade, I was eager to expand my skills and immediately enrolled in my high school's advanced programming class, where I honed my abilities in C++. My passion and skill didn't go unnoticed; I clinched several awards in programming competitions and even developed custom applications for users.</p>
-
-            <p>In 2010, I embarked on my professional journey as a Java developer, creating sophisticated software solutions for an auto repair shop. This role marked the beginning of a deep engagement with Spring Boot and a variety of other Java frameworks that significantly expanded my technical repertoire.</p>
-        
-            <p>Since 2016, I've shifted my focus towards nurturing the next generation of programmers by teaching high school students and developing web-based applications. My programming adventures continue as I extensively use Python, which has become my preferred backend language, proving essential in both educational settings and professional development projects.</p>
         </div>
-    </main>
-  </body>
-</html>
+    </div>
+
+    <div class="story-section">
+        <p>From the moment we got a family computer, a generous gift from my uncle when I was in 6th grade, my fascination with programming took root. I devoted three years to mastering Visual Basic 6, crafting innovative applications for Yahoo and AOL chat services.</p>
+
+        <p>In 2010, I embarked on my professional journey as a Java developer, creating sophisticated software solutions for an auto repair shop. This role marked the beginning of a deep engagement with Spring Boot and a variety of other Java frameworks that significantly expanded my technical repertoire.</p>
+    
+        <p>Since 2016, I've shifted my focus towards nurturing the next generation of programmers by teaching high school students and developing web-based applications. My programming adventures continue as I extensively use Python, which has become my preferred backend language, proving essential in both educational settings and professional development projects.</p>
+    </div>
+</main>
+{% endblock %}
